@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./assets/w3.css">
+        <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+        <title>WebSocket Web Client</title>
+		<style>
+		.row { width: 100%; display: flex; flex-direction: row; justify-content: center;}
+		.hidden { display: none; }
+		</style>
+    </head>
+    <body>
+        <h1>WebSocket chat-application <span id="owner-user" style="color:red;"></span></h1>
+        <ul class="tsummary">
+            <li>allows two-way, event-driven communication between web browser and server</li>
+            <li>for <strong>real-time</strong> applications</li>
+            <li>this tutorial shows how to create a simple Websockets app</li>
+        </ul>
+
+        <pre id="messages" style="width: 90%; margin-left: 5%; height: 200px; overflow: scroll">
+        </pre>
+		<div class="row" id="user-connect">
+			<input type="text" id="userName" placeholder="Type your name here" 
+				style="display: block; width: 78%; margin: 10px; padding: 10px;" />
+			<button id="connect" title="Connect" style="width: 10%; margin: 10px; height: 48px;padding: 10px;"> Connect </button>
+		</div>
+		<div class="row" id="send-message">
+			<input type="text" id="messageBox" placeholder="Type your message here" 
+            style="display: block; width: 80%; margin-bottom: 10px; margin: 10px; padding: 10px;" />
+            <input type="text" id="destination" placeholder="Everyone" 
+            style="display: block; width: 20%; margin-bottom: 10px; margin: 10px; padding: 10px;" />
+		</div>
+        <button id="send" title="Send Message!" style="width: 90%; margin-left: 5%; height: 40px;">
+            Send Message
+        </button>
+        <script src="client.js"></script>
+    </body>
+</html>
